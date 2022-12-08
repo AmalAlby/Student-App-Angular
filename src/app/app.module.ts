@@ -7,18 +7,32 @@ import { AddstudComponent } from './addstud/addstud.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ViewstudComponent } from './viewstud/viewstud.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { SearchstudComponent } from './searchstud/searchstud.component';
 
 const myroute:Routes=[
   {
     path:"",
     component:AddstudComponent
+  },
+  {
+    path: "view",
+    component:ViewstudComponent
+  },
+  {
+    path:"search",
+    component:SearchstudComponent
   }
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddstudComponent
+    AddstudComponent,
+    ViewstudComponent,
+    NavbarComponent,
+    SearchstudComponent
   ],
   imports: [
     BrowserModule,
